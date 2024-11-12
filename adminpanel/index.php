@@ -14,7 +14,7 @@ require "session.php";
 </head>
 
 <body>
-    <h1>jsfjfj</h1>
+    <h1>Selamat datang <?php echo $_SESSION['username']?></h1>
 </body>
 
 </html>

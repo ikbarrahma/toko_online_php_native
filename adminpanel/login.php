@@ -55,7 +55,9 @@ require "../koneksi.php";
                 $data = mysqli_fetch_assoc($query);
                 if($countdata > 0){
                     if(password_verify($password, $data['password'])){
-                        echo "tersedia";
+                        $_SESSION['username'] = $data['username'];
+                        $_SESSION['login'] = true;
+                        header('Location: ../adminpanel');
                     } else {
                             ?>                    
                                 <div class="alert alert-danger" role="alert">
